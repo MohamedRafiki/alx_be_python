@@ -17,6 +17,16 @@ if Priority in ["high", "medium", "low"]:
                 print("reminder:This task requires immediate attention today!")
 else:
     print("Invalid priority entered.")
-
+if time_bound == "no":
+    priority_level = ""
+    if priority == "high":
+        priority_level = "High"
+    elif priority == "medium":
+        priority_level = "Medium"
+    elif priority == "low":
+        priority_level = "Low"
+        
+    print(f"Task: {Task} - Priority: {priority_level}")
+    print("Reminder: This task does not have an immediate deadline.")
 
         
