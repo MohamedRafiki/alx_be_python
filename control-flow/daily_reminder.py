@@ -1,19 +1,22 @@
-task = input("Enter task description: ")
-priority = input("Enter tast priority (high, medium, low): ")
-time_bound = input("Is the task time-bound? (yes or no): ")
-if priority in ["high", "medium", "low"]:
-    match priority:
+Task = input("Enter your task: ")
+Priority = input("Enter your task priority (high, medium, low ): ")
+Time_bound = input("Is task time bound? (yes, no): ")
+if Priority in ["high", "medium", "low"]:
+    match Priority:
         case "high":
-            print(f"task {task} has high priority. ")
+            print(f"Task: {Task} - Priority: high" )
+            if Time_bound == "yes":
+                print("reminder:This task requires immediate attention today!")
         case "medium":
-            print(f"Task {task} has medium priority. ")
+            print(f"Task: {Task} - Preority: medium" )
+            if Time_bound == "yes":
+                print("reminder:This task requires immediate attention today!")
         case "low":
-            print(f"Task is {task} has low priority. ")
+            print(f"Task: {Task} - Preority low")
+            if Time_bound == "yes":
+                print("reminder:This task requires immediate attention today!")
 else:
-    print(f"Error invalid priority. ")
-if time_bound == "yes":
-    print(f"Task {task} is time_bound and requires attention. ")
-elif time_bound == "no":
-    print(f"task {task} is not time_bound. ")
-else:
-    print(f"Invalid input.")        
+    print("Invalid priority entered.")
+
+
+        
